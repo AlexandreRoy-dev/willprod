@@ -153,8 +153,8 @@
             footerRights: "© 2026 Équipe William. Tous droits réservés."
         },
         en: {
-            metaTitle: "Équipe William — Luxury Real Estate & Sales Strategies",
-            metaDescription: "Équipe William: Licensed real estate brokers specializing in luxury and residential real estate in Montreal, Laval and the North Shore. Maximize your property's value.",
+            metaTitle: "Team William — Luxury Real Estate & Sales Strategies",
+            metaDescription: "Team William: Licensed real estate brokers specializing in luxury and residential real estate in Montreal, Laval and the North Shore. Maximize your property's value.",
             navHome: "Home",
             navProperties: "Properties",
             navAbout: "About",
@@ -164,7 +164,7 @@
             navContact: "Contact us",
             langLabel: "Language",
             heroTagline: "Sell with confidence",
-            heroTitle1: "L'ÉQUIPE WILLIAM",
+            heroTitle1: "TEAM WILLIAM",
             heroTitle2: "SELL WITHOUT COMPROMISE",
             heroDesc: "Entrusting your property to our team means choosing an exceptional market launch and flawless support to complete your transaction under the best conditions.",
             heroCta: "Request a free evaluation",
@@ -177,7 +177,7 @@
             aboutLabel: "Our Philosophy",
             aboutTitle1: "REAL ESTATE",
             aboutTitle2: "STRESS-FREE.",
-            aboutP1: "At Équipe William, we believe that selling or buying a property is one of the most important transitions in your life. That's why we've banished the one-size-fits-all approach.",
+            aboutP1: "At Team William, we believe that selling or buying a property is one of the most important transitions in your life. That's why we've banished the one-size-fits-all approach.",
             aboutP2: "Our strength lies in the perfect balance between rigorous market analysis and bold marketing strategy. We don't just put up a sign; we create buzz, we enhance every detail and we negotiate with unwavering firmness to protect your interests.",
             aboutQuote: "\"Excellence is not an act, but a habit. We aim for perfection at every step.\"",
             seeProperties: "View our properties",
@@ -234,14 +234,14 @@
             footerSell: "Sale & Marketing",
             footerInvest: "Investment",
             footerContact: "Contact",
-            footerCopyright: "© 2026 Équipe William.",
+            footerCopyright: "© 2026 Team William.",
             footerWebDesign: "Web design by",
             // William page
             backHome: "Back to home",
             workWithWilliam: "Work with William",
             williamMetaTitle: "William Latreille — Licensed Real Estate Broker",
             williamRoleLabel: "Real Estate Broker",
-            williamIntro: "Founder of Équipe William. Known for his boundless energy, total transparency and ability to close the most complex transactions.",
+            williamIntro: "Founder of Team William. Known for his boundless energy, total transparency and ability to close the most complex transactions.",
             labelMobile: "Mobile",
             labelEmail: "Email",
             yearsExp: "Years of experience",
@@ -286,7 +286,7 @@
             camilleContactTag: "A human approach",
             camilleContactTitle: "TALK TO CAMILLE",
             formPlaceholderProject: "Tell me about your project...",
-            footerRights: "© 2026 Équipe William. All rights reserved."
+            footerRights: "© 2026 Team William. All rights reserved."
         }
     };
 
