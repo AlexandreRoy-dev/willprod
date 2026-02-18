@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" class="scroll-smooth">
+<html lang="fr" class="scroll-smooth" id="html-lang">
 <head>
     <title>Équipe William — Immobilier de Luxe & Stratégies de Vente</title>
     <meta charset="utf-8">
@@ -77,6 +77,7 @@
     </style>
 </head>
 <body class="antialiased text-gray-800 font-sans bg-white selection:bg-brand-red selection:text-white">
+    <script src="js/i18n.js"></script>
 
 
   <!--nav-->
@@ -94,15 +95,19 @@
                      class="w-[240px] h-auto transition-opacity duration-300 opacity-0 absolute top-1/2 left-0 -translate-y-1/2">
             </a>
 
-            <div class="hidden md:flex items-center gap-8 text-sm font-semibold uppercase tracking-wide">
-                <a href="index.html" class="nav-link text-white hover:text-brand-red transition-colors">Accueil</a>
-                <a href="https://www.centris.ca/fr/courtier-immobilier~william-latreille~proprio-direct/h3492" class="nav-link text-white hover:text-brand-red transition-colors">propriétés</a>
-                <a href="#about" class="nav-link text-white hover:text-brand-red transition-colors">À propos</a>
-                <a href="#team" class="nav-link text-white hover:text-brand-red transition-colors">L'Équipe</a>
-                <a href="#sold-map-section" class="nav-link text-white hover:text-brand-red transition-colors">Vendus</a>
-                <a href="#testimonials" class="nav-link text-white hover:text-brand-red transition-colors">Témoignages</a>
-                
-                <a id="nav-cta" href="#contact" class="bg-white text-brand-dark px-6 py-3 rounded hover:bg-brand-red hover:text-white transition-all duration-300">Nous contacter</a>
+            <div class="hidden md:flex items-center gap-6 text-sm font-semibold uppercase tracking-wide">
+                <a href="index.html" class="nav-link text-white hover:text-brand-red transition-colors" data-i18n="navHome">Accueil</a>
+                <a href="https://www.centris.ca/fr/courtier-immobilier~william-latreille~proprio-direct/h3492" class="nav-link text-white hover:text-brand-red transition-colors" data-i18n="navProperties">propriétés</a>
+                <a href="#about" class="nav-link text-white hover:text-brand-red transition-colors" data-i18n="navAbout">À propos</a>
+                <a href="#team" class="nav-link text-white hover:text-brand-red transition-colors" data-i18n="navTeam">L'Équipe</a>
+                <a href="#sold-map-section" class="nav-link text-white hover:text-brand-red transition-colors" data-i18n="navSold">Vendus</a>
+                <a href="#testimonials" class="nav-link text-white hover:text-brand-red transition-colors" data-i18n="navTestimonials">Témoignages</a>
+                <div class="flex items-center gap-1 border-l border-white/30 pl-4 nav-lang-toggle">
+                    <button type="button" data-lang-switch="fr" data-lang-toggle="fr" class="text-white hover:text-brand-red transition-colors opacity-100 font-bold text-xs" aria-label="Français">FR</button>
+                    <span class="text-white/50">|</span>
+                    <button type="button" data-lang-switch="en" data-lang-toggle="en" class="text-white hover:text-brand-red transition-colors opacity-60 text-xs" aria-label="English">EN</button>
+                </div>
+                <a id="nav-cta" href="#contact" class="bg-white text-brand-dark px-6 py-3 rounded hover:bg-brand-red hover:text-white transition-all duration-300" data-i18n="navContact">Nous contacter</a>
             </div>
 
             <div class="md:hidden flex items-center">
@@ -115,11 +120,16 @@
 
     <div id="mobile-menu" class="md:hidden bg-white border-b border-gray-100 shadow-xl">
         <div class="px-4 pt-2 pb-6 space-y-2">
-            <a href="#" class="block px-3 py-3 text-base font-bold text-brand-dark hover:text-brand-red hover:bg-gray-50 rounded-md">Accueil</a>
-            <a href="#team" class="block px-3 py-3 text-base font-bold text-brand-dark hover:text-brand-red hover:bg-gray-50 rounded-md">L'Équipe</a>
-            <a href="#sold-map-section" class="block px-3 py-3 text-base font-bold text-brand-dark hover:text-brand-red hover:bg-gray-50 rounded-md">Vendus</a>
-            <a href="#testimonials" class="block px-3 py-3 text-base font-bold text-brand-dark hover:text-brand-red hover:bg-gray-50 rounded-md">Témoignages</a>
-            <a href="#contact" class="block px-3 py-3 text-base font-bold text-brand-red bg-red-50 rounded-md mt-4">Nous contacter</a>
+            <a href="index.html" class="block px-3 py-3 text-base font-bold text-brand-dark hover:text-brand-red hover:bg-gray-50 rounded-md" data-i18n="navHome">Accueil</a>
+            <a href="#team" class="block px-3 py-3 text-base font-bold text-brand-dark hover:text-brand-red hover:bg-gray-50 rounded-md" data-i18n="navTeam">L'Équipe</a>
+            <a href="#sold-map-section" class="block px-3 py-3 text-base font-bold text-brand-dark hover:text-brand-red hover:bg-gray-50 rounded-md" data-i18n="navSold">Vendus</a>
+            <a href="#testimonials" class="block px-3 py-3 text-base font-bold text-brand-dark hover:text-brand-red hover:bg-gray-50 rounded-md" data-i18n="navTestimonials">Témoignages</a>
+            <div class="flex items-center gap-2 px-3 py-2 border-t border-gray-100 mt-2 pt-3">
+                <span class="text-xs font-bold text-gray-500 uppercase tracking-wider" data-i18n="langLabel">Langue</span>
+                <button type="button" data-lang-switch="fr" data-lang-toggle="fr" class="px-3 py-1.5 rounded text-sm font-bold text-brand-dark bg-gray-100">FR</button>
+                <button type="button" data-lang-switch="en" data-lang-toggle="en" class="px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100">EN</button>
+            </div>
+            <a href="#contact" class="block px-3 py-3 text-base font-bold text-brand-red bg-red-50 rounded-md mt-2" data-i18n="navContact">Nous contacter</a>
         </div>
     </div>
 </nav>
@@ -135,37 +145,37 @@
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
         <div class="max-w-4xl pt-20">
             <div data-aos="fade-right" data-aos-duration="1000" class="inline-flex items-center gap-3 mb-8 border-l-4 border-brand-red pl-4">
-                <span class="text-white text-xs font-bold tracking-[0.2em] uppercase">Vendre en toute confiance</span>
+                <span class="text-white text-xs font-bold tracking-[0.2em] uppercase" data-i18n="heroTagline">Vendre en toute confiance</span>
             </div>
             
 <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" class="text-5xl md:text-7xl lg:text-8xl font-black text-white leading-none mb-8 tracking-tighter">
-    <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-red to-red-600 block mb-2">L'ÉQUIPE WILLIAM</span>
-    <span class="text-white text-4xl md:text-6xl lg:text-7xl block">VENDRE SANS COMPROMIS</span>
+    <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-red to-red-600 block mb-2" data-i18n="heroTitle1">L'ÉQUIPE WILLIAM</span>
+    <span class="text-white text-4xl md:text-6xl lg:text-7xl block" data-i18n="heroTitle2">VENDRE SANS COMPROMIS</span>
 </h1>
             
-            <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400" class="text-xl text-gray-300 mb-10 leading-relaxed font-light max-w-xl">
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400" class="text-xl text-gray-300 mb-10 leading-relaxed font-light max-w-xl" data-i18n="heroDesc">
                 Confier votre propriété à notre équipe, c'est choisir une mise en marché d'exception et un accompagnement sans faille pour réaliser votre transaction aux meilleures conditions.
             </p>
             
             <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600" class="flex flex-col sm:flex-row gap-4 mb-16">
                 <a href="#contact" class="inline-flex items-center justify-center gap-3 bg-brand-red text-white px-8 py-5 rounded hover:bg-white hover:text-brand-dark transition-all duration-300 font-bold tracking-wide uppercase text-sm shadow-lg shadow-brand-red/30 group">
-                    <span>Demander une évaluation gratuite</span>
+                    <span data-i18n="heroCta">Demander une évaluation gratuite</span>
                     <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
                 </a>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 lg:gap-12 border-t border-white/10 pt-8">
                 <div data-aos="fade-in" data-aos-delay="800" class="min-w-0">
-                    <p class="text-xl md:text-2xl font-black text-white tracking-tight uppercase break-words">Rigueur</p>
-                    <p class="text-gray-400 text-xs font-bold uppercase tracking-widest mt-2">Gestion impeccable</p>
+                    <p class="text-xl md:text-2xl font-black text-white tracking-tight uppercase break-words" data-i18n="attrRigueur">Rigueur</p>
+                    <p class="text-gray-400 text-xs font-bold uppercase tracking-widest mt-2" data-i18n="attrRigueurSub">Gestion impeccable</p>
                 </div>
                 <div data-aos="fade-in" data-aos-delay="1000" class="min-w-0">
-                    <p class="text-xl md:text-2xl font-black text-white tracking-tight uppercase break-words">Transparence</p>
-                    <p class="text-gray-400 text-xs font-bold uppercase tracking-widest mt-2">Communication continue</p>
+                    <p class="text-xl md:text-2xl font-black text-white tracking-tight uppercase break-words" data-i18n="attrTransparence">Transparence</p>
+                    <p class="text-gray-400 text-xs font-bold uppercase tracking-widest mt-2" data-i18n="attrTransparenceSub">Communication continue</p>
                 </div>
                 <div data-aos="fade-in" data-aos-delay="1200" class="min-w-0">
-                    <p class="text-xl md:text-2xl font-black text-white tracking-tight uppercase break-words">Performance</p>
-                    <p class="text-gray-400 text-xs font-bold uppercase tracking-widest mt-2">Résultats concrets</p>
+                    <p class="text-xl md:text-2xl font-black text-white tracking-tight uppercase break-words" data-i18n="attrPerformance">Performance</p>
+                    <p class="text-gray-400 text-xs font-bold uppercase tracking-widest mt-2" data-i18n="attrPerformanceSub">Résultats concrets</p>
                 </div>
             </div>
         </div>
@@ -181,38 +191,38 @@
         <div class="grid lg:grid-cols-2 gap-16 items-center">
             
             <div data-aos="fade-right">
-                <span class="text-brand-red font-bold tracking-widest uppercase text-xs mb-4 block">Notre Philosophie</span>
+                <span class="text-brand-red font-bold tracking-widest uppercase text-xs mb-4 block" data-i18n="aboutLabel">Notre Philosophie</span>
                 <h2 class="text-4xl md:text-5xl font-black text-brand-dark mb-8 tracking-tighter leading-tight">
-                    L'IMMOBILIER <br>
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-red to-red-600">SANS STRESS.</span>
+                    <span data-i18n="aboutTitle1">L'IMMOBILIER</span> <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-red to-red-600" data-i18n="aboutTitle2">SANS STRESS.</span>
                 </h2>
                 
                 <div class="space-y-6 text-gray-600 font-light text-lg leading-relaxed">
-                    <p>
-                        Chez <strong>Équipe William</strong>, nous croyons que vendre ou acheter une propriété est l'une des transitions les plus importantes de votre vie. C'est pourquoi nous avons banni l'approche "taille unique".
+                    <p data-i18n="aboutP1">
+                        Chez Équipe William, nous croyons que vendre ou acheter une propriété est l'une des transitions les plus importantes de votre vie. C'est pourquoi nous avons banni l'approche "taille unique".
                     </p>
-                    <p>
-                        Notre force réside dans l'équilibre parfait entre une <strong>analyse de marché rigoureuse</strong> et une <strong>stratégie marketing audacieuse</strong>. Nous ne nous contentons pas de mettre une pancarte; nous créons un engouement, nous valorisons chaque détail et nous négocions avec une fermeté inébranlable pour défendre vos intérêts.
+                    <p data-i18n="aboutP2">
+                        Notre force réside dans l'équilibre parfait entre une analyse de marché rigoureuse et une stratégie marketing audacieuse. Nous ne nous contentons pas de mettre une pancarte; nous créons un engouement, nous valorisons chaque détail et nous négocions avec une fermeté inébranlable pour défendre vos intérêts.
                     </p>
-                    <p class="border-l-4 border-brand-red pl-6 py-2 italic text-gray-800 font-medium">
+                    <p class="border-l-4 border-brand-red pl-6 py-2 italic text-gray-800 font-medium" data-i18n="aboutQuote">
                         "L'excellence n'est pas un acte, c'est une habitude. Nous visons la perfection à chaque étape."
                     </p>
                 </div>
 
                 <div class="mt-8">
                     <a href="https://www.centris.ca/fr/courtier-immobilier~william-latreille~proprio-direct/h3492" target="_blank" class="inline-flex items-center gap-3 bg-brand-red text-white px-8 py-4 rounded hover:bg-brand-dark transition-all duration-300 font-bold tracking-wide uppercase text-xs group">
-                        <span>Voir nos propriétés</span>
+                        <span data-i18n="seeProperties">Voir nos propriétés</span>
                         <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                     </a>
                 </div>
                 <div class="mt-10 flex gap-8">
                     <div>
                         <span class="block text-3xl font-black text-brand-dark">40+</span>
-                        <span class="text-xs font-bold uppercase tracking-widest text-gray-400">Transactions par année</span>
+                        <span class="text-xs font-bold uppercase tracking-widest text-gray-400" data-i18n="statTransactions">Transactions par année</span>
                     </div>
                     <div>
                         <span class="block text-3xl font-black text-brand-dark">20M$+</span>
-                        <span class="text-xs font-bold uppercase tracking-widest text-gray-400">Volume en 2025</span>
+                        <span class="text-xs font-bold uppercase tracking-widest text-gray-400" data-i18n="statVolume">Volume en 2025</span>
                     </div>
                 </div>
             </div>
@@ -222,7 +232,7 @@
                     <img src="about.webp" alt="Interior Design" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
                 </div>
                 <div class="absolute -bottom-6 -left-6 bg-brand-dark text-white p-6 rounded shadow-xl max-w-xs hidden md:block">
-                    <p class="text-sm font-medium leading-relaxed">
+                    <p class="text-sm font-medium leading-relaxed" data-i18n="aboutQuote2">
                         "Une équipe dévouée qui transforme les défis immobiliers en succès retentissants."
                     </p>
                 </div>
@@ -237,10 +247,10 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex flex-col md:flex-row justify-between items-end mb-20 border-b border-gray-100 pb-8">
             <div data-aos="fade-right">
-                <span class="text-brand-red font-bold tracking-widest uppercase text-xs">Notre Équipe</span>
-                <h2 class="text-5xl md:text-6xl font-black text-brand-dark mt-2 tracking-tighter">NOS EXPERTS</h2>
+                <span class="text-brand-red font-bold tracking-widest uppercase text-xs" data-i18n="teamLabel">Notre Équipe</span>
+                <h2 class="text-5xl md:text-6xl font-black text-brand-dark mt-2 tracking-tighter" data-i18n="teamTitle">NOS EXPERTS</h2>
             </div>
-            <p data-aos="fade-left" class="text-gray-500 max-w-sm mt-6 md:mt-0 font-medium">Une approche analytique et humaine pour des résultats exceptionnels.</p>
+            <p data-aos="fade-left" class="text-gray-500 max-w-sm mt-6 md:mt-0 font-medium" data-i18n="teamSub">Une approche analytique et humaine pour des résultats exceptionnels.</p>
         </div>
 
         <div class="grid md:grid-cols-2 gap-12">
@@ -248,19 +258,19 @@
                 <div class="relative overflow-hidden mb-6 bg-gray-100 rounded-lg">
                     <img src="teamwill.webp" alt="William Latreille" class="w-full aspect-square object-cover transition-transform duration-700 group-hover:scale-105">
                     <div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-4 py-2 rounded">
-                        <span class="text-xs font-bold uppercase tracking-wider text-brand-dark">Fondateur</span>
+                        <span class="text-xs font-bold uppercase tracking-wider text-brand-dark" data-i18n="founder">Fondateur</span>
                     </div>
                 </div>
                 
                 <h3 class="text-3xl font-bold text-brand-dark mb-1 tracking-tight">William Latreille</h3>
-                <p class="text-gray-500 font-medium mb-4">Courtier Immobilier</p>
-                <p class="text-gray-600 leading-relaxed mb-6 text-sm">
+                <p class="text-gray-500 font-medium mb-4" data-i18n="williamRole">Courtier Immobilier</p>
+                <p class="text-gray-600 leading-relaxed mb-6 text-sm" data-i18n="williamBio">
                     Expert du marché, William allie une analyse rigoureuse des données à une compréhension intuitive des besoins de ses clients.
                 </p>
                 
                
 
-                <a href="william-latreille.html" class="inline-flex items-center justify-center w-full sm:w-auto bg-brand-dark text-white px-6 py-3 rounded hover:bg-brand-red transition-colors duration-300 font-bold tracking-wide uppercase text-xs">
+                <a href="william-latreille.html" class="inline-flex items-center justify-center w-full sm:w-auto bg-brand-dark text-white px-6 py-3 rounded hover:bg-brand-red transition-colors duration-300 font-bold tracking-wide uppercase text-xs" data-i18n="learnMore">
                     En savoir plus
                 </a>
             </div>
@@ -269,19 +279,19 @@
                 <div class="relative overflow-hidden mb-6 bg-gray-100 rounded-lg">
                     <img src="camille.png" alt="Camille Bernier" class="w-full aspect-square object-cover transition-transform duration-700 group-hover:scale-105">
                     <div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-4 py-2 rounded">
-                        <span class="text-xs font-bold uppercase tracking-wider text-brand-dark">Partenaire</span>
+                        <span class="text-xs font-bold uppercase tracking-wider text-brand-dark" data-i18n="partner">Partenaire</span>
                     </div>
                 </div>
                 
                 <h3 class="text-3xl font-bold text-brand-dark mb-1 tracking-tight">Camille Bernier </h3>
-                <p class="text-gray-500 font-medium mb-4">Courtière Immobilière</p>
-                <p class="text-gray-600 leading-relaxed mb-6 text-sm">
+                <p class="text-gray-500 font-medium mb-4" data-i18n="camilleRole">Courtière Immobilière</p>
+                <p class="text-gray-600 leading-relaxed mb-6 text-sm" data-i18n="camilleBio">
                     Spécialiste de la négociation et du home staging, Camille transforme chaque visite en coup de cœur. Sa vision esthétique est un atout majeur.
                 </p>
 
                
 
-                <a href="camille-bernier.html" class="inline-flex items-center justify-center w-full sm:w-auto bg-brand-dark text-white px-6 py-3 rounded hover:bg-brand-red transition-colors duration-300 font-bold tracking-wide uppercase text-xs">
+                <a href="camille-bernier.html" class="inline-flex items-center justify-center w-full sm:w-auto bg-brand-dark text-white px-6 py-3 rounded hover:bg-brand-red transition-colors duration-300 font-bold tracking-wide uppercase text-xs" data-i18n="learnMore">
                     En savoir plus
                 </a>
             </div>
@@ -296,15 +306,15 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid lg:grid-cols-3 gap-12 mb-12">
             <div class="lg:col-span-1" data-aos="fade-right">
-                <span class="text-brand-red font-bold tracking-widest uppercase text-xs">Portfolio</span>
-                <h2 class="text-4xl md:text-5xl font-black text-brand-dark mt-2 mb-6 tracking-tighter">PROPRIÉTÉS<br>VENDUES</h2>
-                <p class="text-gray-600 mb-8">
+                <span class="text-brand-red font-bold tracking-widest uppercase text-xs" data-i18n="mapLabel">Portfolio</span>
+                <h2 class="text-4xl md:text-5xl font-black text-brand-dark mt-2 mb-6 tracking-tighter" data-i18n="mapTitle">PROPRIÉTÉS VENDUES</h2>
+                <p class="text-gray-600 mb-8" data-i18n="mapDesc">
                     Explorez nos succès récents à travers Montréal. Chaque point sur la carte représente une stratégie gagnante et un client satisfait.
                 </p>
                 
                 <div>
                     <a href="https://www.centris.ca/fr/courtier-immobilier~william-latreille~proprio-direct/h3492" target="_blank" class="inline-flex items-center gap-3 bg-brand-red text-white px-8 py-4 rounded hover:bg-brand-dark transition-all duration-300 font-bold tracking-wide uppercase text-xs group">
-                        <span>Voir nos propriétés</span>
+                        <span data-i18n="seeProperties">Voir nos propriétés</span>
                         <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                     </a>
                 </div>
@@ -323,7 +333,7 @@
 <section id="testimonials" class="py-24 bg-brand-dark text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-20">
-                <h2 data-aos="fade-up" class="text-4xl md:text-5xl font-black tracking-tighter text-white">CE QUE DISENT<br><span class="text-brand-red">NOS CLIENTS</span></h2>
+                <h2 data-aos="fade-up" class="text-4xl md:text-5xl font-black tracking-tighter text-white" data-i18n="testimonialsTitle">CE QUE DISENT NOS CLIENTS</h2>
             </div>
             
             <div class="grid md:grid-cols-3 gap-8">
@@ -340,7 +350,7 @@
                         <div class="w-10 h-10 rounded-full bg-brand-red flex items-center justify-center font-bold text-white text-sm">AH</div>
                         <div>
                             <p class="font-bold text-white uppercase tracking-wide text-sm">Amine Hammouti</p>
-                            <p class="text-[10px] text-gray-500 uppercase tracking-widest">Avis Google</p>
+                            <p class="text-[10px] text-gray-500 uppercase tracking-widest" data-i18n="googleReview">Avis Google</p>
                         </div>
                     </div>
                 </div>
@@ -353,12 +363,12 @@
                         <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
                         <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
                     </div>
-                    <p class="text-gray-300 mb-6 leading-relaxed font-light flex-grow">"William, que dire de ce courtier ? En un mot : "wow". Passionné, humain, énergique, à l'écoute... Une première expérience pour moi qui s'est avérée un franc succès. 100% confiance en lui, un travail impeccable !"</p>
+                    <p class="text-gray-300 mb-6 leading-relaxed font-light flex-grow" data-i18n="testimonial2">"William, que dire de ce courtier ? En un mot : "wow". Passionné, humain, énergique, à l'écoute... Une première expérience pour moi qui s'est avérée un franc succès. 100% confiance en lui, un travail impeccable !"</p>
                     <div class="border-t border-white/10 pt-4 mt-auto flex items-center gap-3">
                         <div class="w-10 h-10 rounded-full bg-brand-red flex items-center justify-center font-bold text-white text-sm">MC</div>
                         <div>
                             <p class="font-bold text-white uppercase tracking-wide text-sm">Marie C</p>
-                            <p class="text-[10px] text-gray-500 uppercase tracking-widest">Avis Google</p>
+                            <p class="text-[10px] text-gray-500 uppercase tracking-widest" data-i18n="googleReview">Avis Google</p>
                         </div>
                     </div>
                 </div>
@@ -371,12 +381,12 @@
                         <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
                         <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
                     </div>
-                    <p class="text-gray-300 mb-6 leading-relaxed font-light flex-grow">"William a été très présent à chaque étape de la vente de mon condo. Sympathique, courtois et dédié, il a répondu à toutes mes questions. J’ai vendu 2 propriétés avec lui et je le recommande sans hésiter !"</p>
+                    <p class="text-gray-300 mb-6 leading-relaxed font-light flex-grow" data-i18n="testimonial3">"William a été très présent à chaque étape de la vente de mon condo. Sympathique, courtois et dédié, il a répondu à toutes mes questions. J’ai vendu 2 propriétés avec lui et je le recommande sans hésiter !"</p>
                     <div class="border-t border-white/10 pt-4 mt-auto flex items-center gap-3">
                         <div class="w-10 h-10 rounded-full bg-brand-red flex items-center justify-center font-bold text-white text-sm">GD</div>
                         <div>
                             <p class="font-bold text-white uppercase tracking-wide text-sm">Geneviève Dionne</p>
-                            <p class="text-[10px] text-gray-500 uppercase tracking-widest">Avis Google</p>
+                            <p class="text-[10px] text-gray-500 uppercase tracking-widest" data-i18n="googleReview">Avis Google</p>
                         </div>
                     </div>
                 </div>
@@ -384,7 +394,7 @@
 
             <div class="mt-16 text-center" data-aos="fade-up" data-aos-delay="400">
                 <a href="https://www.google.com/search?sca_esv=bb60679124c5811c&cs=1&sxsrf=ANbL-n5db2VWm1IQcTBT9JMiqaA7OqjjNQ:1767804246625&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOZp-E36x6T2Yw53FbHXAF0vGP9pT2cWxFq2SDM0QjJW0_ZIZZi0JNC0LIejGHDX25OvmZ1b7WCjVdoRCua5d-Sqp1eGxqqS2YjhczTE6gdZuYXx_pA%3D%3D&q=William+Latreille+Reviews&sa=X&ved=2ahUKEwiL75uB8PmRAxUxETQIHWmNDREQ0bkNegQINRAE&biw=1920&bih=911&dpr=1&aic=0" target="_blank" class="inline-flex items-center gap-3 border border-white/20 hover:border-white hover:bg-white hover:text-brand-dark text-white px-8 py-4 rounded transition-all duration-300 font-bold uppercase tracking-widest text-xs group">
-                    <span>Partagez votre expérience</span>
+                    <span data-i18n="shareExperience">Partagez votre expérience</span>
                     <svg class="w-4 h-4 text-brand-red group-hover:text-brand-dark transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
                 </a>
             </div>
@@ -398,9 +408,9 @@
             <div class="grid lg:grid-cols-2 gap-16 items-start">
                 <div class="sticky top-24">
                     <div data-aos="fade-up">
-                        <span class="text-brand-red font-bold tracking-widest uppercase text-xs">Parlons de votre projet</span>
-                        <h2 class="text-5xl font-black mt-2 mb-8 tracking-tighter text-brand-dark">CONTACTEZ-NOUS</h2>
-                        <p class="text-gray-600 mb-10 leading-relaxed text-lg">
+                        <span class="text-brand-red font-bold tracking-widest uppercase text-xs" data-i18n="contactLabel">Parlons de votre projet</span>
+                        <h2 class="text-5xl font-black mt-2 mb-8 tracking-tighter text-brand-dark" data-i18n="contactTitle">CONTACTEZ-NOUS</h2>
+                        <p class="text-gray-600 mb-10 leading-relaxed text-lg" data-i18n="contactIntro">
                             Que vous cherchiez à vendre ou à acheter, nous sommes prêts à vous écouter. Remplissez le formulaire et nous vous répondrons sous 24h.
                         </p>
                     </div>
@@ -409,21 +419,21 @@
                         <div class="flex items-start gap-6 group" data-aos="fade-up" data-aos-delay="100">
                             <span class="text-2xl font-bold text-gray-300 group-hover:text-brand-red transition-colors">01</span>
                             <div>
-                                <h4 class="font-bold text-lg text-brand-dark">Bureau</h4>
-                                <p class="text-gray-500 mt-1">Bureau #200 <br>3891 A. des Laurentides E <br>Laval, QC H7L 3H7</p>
+                                <h4 class="font-bold text-lg text-brand-dark" data-i18n="contactOffice">Bureau</h4>
+                                <p class="text-gray-500 mt-1 whitespace-pre-line" data-i18n="contactAddress">Bureau #200 <br>3891 A. des Laurentides E <br>Laval, QC H7L 3H7</p>
                             </div>
                         </div>
                         <div class="flex items-start gap-6 group" data-aos="fade-up" data-aos-delay="200">
                             <span class="text-2xl font-bold text-gray-300 group-hover:text-brand-red transition-colors">02</span>
                             <div>
-                                <h4 class="font-bold text-lg text-brand-dark">Téléphone</h4>
+                                <h4 class="font-bold text-lg text-brand-dark" data-i18n="contactPhone">Téléphone</h4>
                                 <p class="text-gray-500 mt-1">(514) 649-9455</p>
                             </div>
                         </div>
                         <div class="flex items-start gap-6 group" data-aos="fade-up" data-aos-delay="300">
                             <span class="text-2xl font-bold text-gray-300 group-hover:text-brand-red transition-colors">03</span>
                             <div>
-                                <h4 class="font-bold text-lg text-brand-dark">Courriel</h4>
+                                <h4 class="font-bold text-lg text-brand-dark" data-i18n="contactEmail">Courriel</h4>
                                 <p class="text-gray-500 mt-1">willlatreille@gmail.com</p>
                             </div>
                         </div>
@@ -434,20 +444,20 @@
                     <form action="https://formspree.io/f/mojvglaj" method="POST" class="space-y-6">
                         <div class="grid md:grid-cols-2 gap-6">
                             <div>
-                                <label class="block text-xs font-bold text-brand-dark uppercase tracking-widest mb-2">Prénom</label>
-                                <input type="text" name="firstname" class="w-full px-4 py-4 bg-white border-0 border-b-2 border-gray-200 focus:border-brand-red focus:ring-0 transition-colors placeholder-gray-300 text-sm font-medium" placeholder="John" required>
+                                <label class="block text-xs font-bold text-brand-dark uppercase tracking-widest mb-2" data-i18n="formFirstname">Prénom</label>
+                                <input type="text" name="firstname" data-i18n-placeholder="formPlaceholderFirst" class="w-full px-4 py-4 bg-white border-0 border-b-2 border-gray-200 focus:border-brand-red focus:ring-0 transition-colors placeholder-gray-300 text-sm font-medium" placeholder="John" required>
                             </div>
                             <div>
-                                <label class="block text-xs font-bold text-brand-dark uppercase tracking-widest mb-2">Nom</label>
-                                <input type="text" name="lastname" class="w-full px-4 py-4 bg-white border-0 border-b-2 border-gray-200 focus:border-brand-red focus:ring-0 transition-colors placeholder-gray-300 text-sm font-medium" placeholder="Doe" required>
+                                <label class="block text-xs font-bold text-brand-dark uppercase tracking-widest mb-2" data-i18n="formLastname">Nom</label>
+                                <input type="text" name="lastname" data-i18n-placeholder="formPlaceholderLast" class="w-full px-4 py-4 bg-white border-0 border-b-2 border-gray-200 focus:border-brand-red focus:ring-0 transition-colors placeholder-gray-300 text-sm font-medium" placeholder="Doe" required>
                             </div>
                         </div>
                         <div>
-                            <label class="block text-xs font-bold text-brand-dark uppercase tracking-widest mb-2">Courriel</label>
-                            <input type="email" name="email" class="w-full px-4 py-4 bg-white border-0 border-b-2 border-gray-200 focus:border-brand-red focus:ring-0 transition-colors placeholder-gray-300 text-sm font-medium" placeholder="john@exemple.com" required>
+                            <label class="block text-xs font-bold text-brand-dark uppercase tracking-widest mb-2" data-i18n="formEmail">Courriel</label>
+                            <input type="email" name="email" data-i18n-placeholder="formPlaceholderEmail" class="w-full px-4 py-4 bg-white border-0 border-b-2 border-gray-200 focus:border-brand-red focus:ring-0 transition-colors placeholder-gray-300 text-sm font-medium" placeholder="john@exemple.com" required>
                         </div>
                         <div>
-                            <label class="block text-xs font-bold text-brand-dark uppercase tracking-widest mb-2">Type de projet</label>
+                            <label class="block text-xs font-bold text-brand-dark uppercase tracking-widest mb-2" data-i18n="formProjectType">Type de projet</label>
                             <div class="relative">
                                 <select name="type" class="w-full px-4 py-4 bg-white border-0 border-b-2 border-gray-200 focus:border-brand-red focus:ring-0 transition-colors text-sm font-medium appearance-none">
                                     <option>Je veux vendre une propriété</option>
@@ -460,10 +470,10 @@
                             </div>
                         </div>
                         <div>
-                            <label class="block text-xs font-bold text-brand-dark uppercase tracking-widest mb-2">Message</label>
-                            <textarea name="message" rows="4" class="w-full px-4 py-4 bg-white border-0 border-b-2 border-gray-200 focus:border-brand-red focus:ring-0 transition-colors placeholder-gray-300 text-sm font-medium" placeholder="Dites-nous en plus sur votre projet..." required></textarea>
+                            <label class="block text-xs font-bold text-brand-dark uppercase tracking-widest mb-2" data-i18n="formMessage">Message</label>
+                            <textarea name="message" rows="4" data-i18n-placeholder="formPlaceholderMessage" class="w-full px-4 py-4 bg-white border-0 border-b-2 border-gray-200 focus:border-brand-red focus:ring-0 transition-colors placeholder-gray-300 text-sm font-medium" placeholder="Dites-nous en plus sur votre projet..." required></textarea>
                         </div>
-                        <button type="submit" class="w-full bg-brand-dark text-white font-black uppercase tracking-widest py-5 rounded hover:bg-brand-red transition-all duration-300 mt-4 text-sm">
+                        <button type="submit" class="w-full bg-brand-dark text-white font-black uppercase tracking-widest py-5 rounded hover:bg-brand-red transition-all duration-300 mt-4 text-sm" data-i18n="formSend">
                             Envoyer le message
                         </button>
                     </form>
@@ -477,28 +487,28 @@
             <div class="grid md:grid-cols-4 gap-12 pb-12 border-b border-white/10">
                 <div class="col-span-1 md:col-span-2 lg:col-span-1">
                     <span class="text-2xl font-black tracking-tight mb-6 block">ÉQUIPE WILLIAM.</span>
-                    <p class="text-gray-500 text-sm leading-relaxed">
+                    <p class="text-gray-500 text-sm leading-relaxed" data-i18n="footerTagline">
                         L'immobilier repensé pour ceux qui exigent l'excellence et la transparence.
                     </p>
                 </div>
                 <div>
-                    <h4 class="font-bold mb-6 text-sm uppercase tracking-widest text-brand-red">Navigation</h4>
+                    <h4 class="font-bold mb-6 text-sm uppercase tracking-widest text-brand-red" data-i18n="footerNav">Navigation</h4>
                     <ul class="space-y-3 text-sm text-gray-400 font-medium">
-                        <li><a href="#" class="hover:text-white transition-colors">Accueil</a></li>
-                        <li><a href="#team" class="hover:text-white transition-colors">Équipe</a></li>
-                        <li><a href="#sold-map-section" class="hover:text-white transition-colors">Vendus</a></li>
+                        <li><a href="index.html" class="hover:text-white transition-colors" data-i18n="footerHome">Accueil</a></li>
+                        <li><a href="#team" class="hover:text-white transition-colors" data-i18n="footerTeam">Équipe</a></li>
+                        <li><a href="#sold-map-section" class="hover:text-white transition-colors" data-i18n="footerSold">Vendus</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="font-bold mb-6 text-sm uppercase tracking-widest text-brand-red">Services</h4>
+                    <h4 class="font-bold mb-6 text-sm uppercase tracking-widest text-brand-red" data-i18n="footerServices">Services</h4>
                     <ul class="space-y-3 text-sm text-gray-400 font-medium">
-                        <li>Achat immobilier</li>
-                        <li>Vente & Marketing</li>
-                        <li>Investissement</li>
+                        <li data-i18n="footerBuy">Achat immobilier</li>
+                        <li data-i18n="footerSell">Vente & Marketing</li>
+                        <li data-i18n="footerInvest">Investissement</li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="font-bold mb-6 text-sm uppercase tracking-widest text-brand-red">Contact</h4>
+                    <h4 class="font-bold mb-6 text-sm uppercase tracking-widest text-brand-red" data-i18n="footerContact">Contact</h4>
                     <ul class="space-y-3 text-sm text-gray-400 font-medium">
                         <li>3891 A. des Laurentides E, #200</li>
                         <li>Laval, QC H7L 3H7</li>
@@ -508,9 +518,9 @@
                 </div>
             </div>
             <div class="pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-gray-600 text-xs font-bold uppercase tracking-widest">
-                <p>&copy; 2026 Équipe William.</p>
+                <p data-i18n="footerCopyright">&copy; 2026 Équipe William.</p>
                 <div class="flex gap-6">
-                   <p>Conception web par <span class="brand-red"><a href="https://roymarketing.ca/" >Roy Marketing</a></span> </p> 
+                   <p><span data-i18n="footerWebDesign">Conception web par</span> <span class="brand-red"><a href="https://roymarketing.ca/">Roy Marketing</a></span></p> 
                     
                 </div>
             </div>
@@ -529,6 +539,7 @@
     const logoScroll = document.getElementById('logo-scroll');
     
     const navLinks = document.querySelectorAll('.nav-link');
+    const navLangToggle = document.querySelectorAll('.nav-lang-toggle button');
     const navCta = document.getElementById('nav-cta');
     const mobileBtn = document.getElementById('mobile-menu-btn');
     const mobileIcon = document.getElementById('mobile-menu-icon');
@@ -549,6 +560,7 @@
 
             // Links: Dark
             navLinks.forEach(link => { link.classList.remove('text-white'); link.classList.add('text-brand-dark'); });
+            navLangToggle.forEach(btn => { if (btn) { btn.classList.remove('text-white'); btn.classList.add('text-brand-dark'); } });
             
             // CTA: Dark BG, White Text
             if (navCta) { navCta.classList.remove('bg-white', 'text-brand-dark'); navCta.classList.add('bg-brand-dark', 'text-white'); }
@@ -567,6 +579,7 @@
 
             // Links: White
             navLinks.forEach(link => { link.classList.add('text-white'); link.classList.remove('text-brand-dark'); });
+            navLangToggle.forEach(btn => { if (btn) { btn.classList.add('text-white'); btn.classList.remove('text-brand-dark'); } });
             
             // CTA: White BG, Dark Text
             if (navCta) { navCta.classList.add('bg-white', 'text-brand-dark'); navCta.classList.remove('bg-brand-dark', 'text-white'); }

@@ -35,7 +35,8 @@
         ::-webkit-scrollbar-thumb { background: #D0103A; border-radius: 4px; }
     </style>
 </head>
-<body class="antialiased text-gray-800 font-sans bg-white selection:bg-brand-red selection:text-white">
+<body class="antialiased text-gray-800 font-sans bg-white selection:bg-brand-red selection:text-white" data-page="camille">
+    <script src="js/i18n.js"></script>
 
     <nav class="bg-white/95 backdrop-blur border-b border-gray-100 sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -44,9 +45,16 @@
                     <div class="w-10 h-10 bg-brand-dark group-hover:bg-brand-red transition-colors rounded flex items-center justify-center">
                         <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
                     </div>
-                    <span class="text-sm font-bold uppercase tracking-widest text-brand-dark group-hover:text-brand-red transition-colors">Retour à l'accueil</span>
+                    <span class="text-sm font-bold uppercase tracking-widest text-brand-dark group-hover:text-brand-red transition-colors" data-i18n="backHome">Retour à l'accueil</span>
                 </a>
-                <a href="#contact" class="bg-brand-red text-white px-6 py-3 rounded hover:bg-brand-dark transition-colors duration-300 font-bold uppercase text-xs tracking-widest">Contacter Camille</a>
+                <div class="flex items-center gap-4">
+                    <div class="flex items-center gap-1">
+                        <button type="button" data-lang-switch="fr" data-lang-toggle="fr" class="text-brand-dark hover:text-brand-red transition-colors opacity-100 font-bold text-xs" aria-label="Français">FR</button>
+                        <span class="text-gray-300">|</span>
+                        <button type="button" data-lang-switch="en" data-lang-toggle="en" class="text-brand-dark hover:text-brand-red transition-colors opacity-60 text-xs" aria-label="English">EN</button>
+                    </div>
+                    <a href="#contact" class="bg-brand-red text-white px-6 py-3 rounded hover:bg-brand-dark transition-colors duration-300 font-bold uppercase text-xs tracking-widest" data-i18n="contactCamille">Contacter Camille</a>
+                </div>
             </div>
         </div>
     </nav>
@@ -60,12 +68,12 @@
                 <div data-aos="fade-right">
                     <div class="inline-flex items-center gap-2 mb-6">
                         <span class="w-12 h-1 bg-brand-red"></span>
-                        <span class="text-brand-red font-bold tracking-widest uppercase text-xs">Courtière Immobilière</span>
+                        <span class="text-brand-red font-bold tracking-widest uppercase text-xs" data-i18n="camilleRoleLabel">Courtière Immobilière</span>
                     </div>
                     <h1 class="text-5xl md:text-7xl font-black text-brand-dark mb-6 tracking-tighter leading-none">
                         CAMILLE <br> BERNIER
                     </h1>
-                    <p class="text-xl text-gray-600 mb-8 leading-relaxed font-light">
+                    <p class="text-xl text-gray-600 mb-8 leading-relaxed font-light" data-i18n="camilleIntro">
                         Reconnue pour son approche humaine et son œil esthétique. Camille transforme chaque propriété en coup de cœur et guide ses clients avec une empathie rare.
                     </p>
                     
@@ -75,7 +83,7 @@
                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
                             </div>
                             <div>
-                                <p class="text-xs uppercase font-bold text-gray-400 tracking-widest">Bureau</p>
+                                <p class="text-xs uppercase font-bold text-gray-400 tracking-widest" data-i18n="labelOffice">Bureau</p>
                                 <p class="text-lg font-bold text-brand-dark">(514) 649-9455</p>
                             </div>
                         </div>
@@ -84,7 +92,7 @@
                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                             </div>
                             <div>
-                                <p class="text-xs uppercase font-bold text-gray-400 tracking-widest">Courriel</p>
+                                <p class="text-xs uppercase font-bold text-gray-400 tracking-widest" data-i18n="labelEmail">Courriel</p>
                                 <p class="text-lg font-bold text-brand-dark">camille@equipewilliam.ca</p>
                             </div>
                         </div>
@@ -105,11 +113,11 @@
                         <div class="grid grid-cols-2 gap-8 text-center">
                             <div>
                                 <span class="block text-3xl font-black">5+</span>
-                                <span class="text-[10px] uppercase tracking-widest text-gray-400">Années d'expérience</span>
+                                <span class="text-[10px] uppercase tracking-widest text-gray-400" data-i18n="yearsExp">Années d'expérience</span>
                             </div>
                             <div>
                                 <span class="block text-3xl font-black">100%</span>
-                                <span class="text-[10px] uppercase tracking-widest text-gray-400">Satisfaction</span>
+                                <span class="text-[10px] uppercase tracking-widest text-gray-400" data-i18n="satisfaction">Satisfaction</span>
                             </div>
                         </div>
                     </div>
@@ -123,44 +131,44 @@
             <div class="grid lg:grid-cols-3 gap-16">
                 
                 <div class="lg:col-span-2 space-y-6 text-lg text-gray-600 font-light leading-relaxed">
-                    <h2 class="text-3xl font-black text-brand-dark mb-6 tracking-tight">L'ART DE VALORISER VOTRE ESPACE.</h2>
-                    <p>
+                    <h2 class="text-3xl font-black text-brand-dark mb-6 tracking-tight" data-i18n="camilleHeadline">L'ART DE VALORISER VOTRE ESPACE.</h2>
+                    <p data-i18n="camilleP1">
                         Mon rôle va bien au-delà de la transaction. Je vois chaque propriété comme un projet unique où le design, l'émotion et la stratégie financière se rencontrent.
                     </p>
-                    <p>
+                    <p data-i18n="camilleP2">
                         Spécialiste du "Home Staging" et de la mise en marché, je sais exactement comment présenter votre propriété pour qu'elle déclenche le coup de cœur instantané chez les acheteurs. Mon approche est minutieuse : chaque détail compte.
                     </p>
-                    <p class="border-l-4 border-brand-red pl-6 py-2 italic text-gray-800 font-medium my-8">
+                    <p class="border-l-4 border-brand-red pl-6 py-2 italic text-gray-800 font-medium my-8" data-i18n="camilleQuote">
                         "L'immobilier, c'est avant tout une histoire de confiance. J'accompagne mes clients comme s'il s'agissait de ma propre famille."
                     </p>
-                    <p>
+                    <p data-i18n="camilleP3">
                         Que vous soyez un premier acheteur cherchant la perle rare sur le Plateau, ou un vendeur souhaitant maximiser son investissement, je vous guide avec clarté, patience et une énergie communicative.
                     </p>
                 </div>
 
                 <div class="bg-gray-50 p-8 rounded-lg">
-                    <h3 class="font-bold text-brand-dark uppercase tracking-widest mb-6 border-b border-gray-200 pb-2">Mes Spécialités</h3>
+                    <h3 class="font-bold text-brand-dark uppercase tracking-widest mb-6 border-b border-gray-200 pb-2" data-i18n="mySpecialties">Mes Spécialités</h3>
                     <ul class="space-y-4">
                         <li class="flex items-start gap-3">
                             <svg class="w-5 h-5 text-brand-red mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                            <span class="font-medium text-brand-dark">Accompagnement premiers acheteurs</span>
+                            <span class="font-medium text-brand-dark" data-i18n="camilleSpec1">Accompagnement premiers acheteurs</span>
                         </li>
                         <li class="flex items-start gap-3">
                             <svg class="w-5 h-5 text-brand-red mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                            <span class="font-medium text-brand-dark">Home Staging & Design</span>
+                            <span class="font-medium text-brand-dark" data-i18n="camilleSpec2">Home Staging & Design</span>
                         </li>
                         <li class="flex items-start gap-3">
                             <svg class="w-5 h-5 text-brand-red mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                            <span class="font-medium text-brand-dark">Marché des Condos (Plateau/Rosemont)</span>
+                            <span class="font-medium text-brand-dark" data-i18n="camilleSpec3">Marché des Condos (Plateau/Rosemont)</span>
                         </li>
                         <li class="flex items-start gap-3">
                             <svg class="w-5 h-5 text-brand-red mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                            <span class="font-medium text-brand-dark">Négociation stratégique</span>
+                            <span class="font-medium text-brand-dark" data-i18n="camilleSpec4">Négociation stratégique</span>
                         </li>
                     </ul>
 
                     <div class="mt-8 pt-8 border-t border-gray-200">
-                        <a href="#contact" class="block w-full bg-brand-dark text-white text-center py-3 rounded uppercase font-bold text-xs tracking-widest hover:bg-brand-red transition-colors">
+                        <a href="#contact" class="block w-full bg-brand-dark text-white text-center py-3 rounded uppercase font-bold text-xs tracking-widest hover:bg-brand-red transition-colors" data-i18n="bookMeeting">
                             Prendre Rendez-vous
                         </a>
                     </div>
@@ -178,14 +186,14 @@
                 <svg class="w-12 h-12 fill-current opacity-50" viewBox="0 0 24 24"><path d="M14.017 21L14.017 18C14.017 16.0547 14.5065 14.7933 15.4857 14.2157C14.6521 14.1611 14.017 13.4651 14.017 12.6364C14.017 11.6322 14.8322 10.8182 15.8385 10.8182C16.8448 10.8182 17.66 11.6322 17.66 12.6364C17.66 13.1238 17.4725 13.5681 17.1593 13.9037C16.4891 15.6596 15.176 17.5199 14.017 21ZM5 21L5 18C5 16.0547 5.4895 14.7933 6.46872 14.2157C5.63507 14.1611 5 13.4651 5 12.6364C5 11.6322 5.81519 10.8182 6.82151 10.8182C7.82782 10.8182 8.64301 11.6322 8.64301 12.6364C8.64301 13.1238 8.45547 13.5681 8.14231 13.9037C7.4721 15.6596 6.15897 17.5199 5 21Z"></path></svg>
             </div>
             
-            <p class="text-2xl md:text-3xl font-light italic leading-relaxed mb-8">
+            <p class="text-2xl md:text-3xl font-light italic leading-relaxed mb-8" data-i18n="camilleTestimonial">
                 "Camille a su cerner nos besoins dès la première rencontre. Elle nous a trouvé la perle rare sur le Plateau alors qu'elle n'était même pas encore sur le marché. Son écoute a fait toute la différence."
             </p>
             
             <div class="flex items-center justify-center gap-4">
                 <div class="text-right">
                     <p class="font-bold uppercase tracking-widest text-sm">Sophie L.</p>
-                    <p class="text-xs text-gray-400">Cliente Acheteuse</p>
+                    <p class="text-xs text-gray-400" data-i18n="clientBuyer">Cliente Acheteuse</p>
                 </div>
                 <div class="h-10 w-[1px] bg-white/20"></div>
                 <div class="flex text-brand-red">
@@ -202,31 +210,31 @@
     <section id="contact" class="bg-white py-24">
         <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
-                <span class="text-brand-red font-bold tracking-widest uppercase text-xs">Une approche humaine</span>
-                <h2 class="text-4xl font-black mt-2 text-brand-dark">DISCUTER AVEC CAMILLE</h2>
+                <span class="text-brand-red font-bold tracking-widest uppercase text-xs" data-i18n="camilleContactTag">Une approche humaine</span>
+                <h2 class="text-4xl font-black mt-2 text-brand-dark" data-i18n="camilleContactTitle">DISCUTER AVEC CAMILLE</h2>
             </div>
             
             <div class="bg-gray-50 p-8 md:p-12 rounded-lg shadow-lg border border-gray-100">
                 <form action="https://formspree.io/f/mojvglaj" method="POST" class="space-y-6">
                     <div class="grid md:grid-cols-2 gap-6">
                         <div>
-                            <label class="block text-xs font-bold text-brand-dark uppercase tracking-widest mb-2">Prénom</label>
+                            <label class="block text-xs font-bold text-brand-dark uppercase tracking-widest mb-2" data-i18n="formFirstname">Prénom</label>
                             <input type="text" name="firstname" class="w-full px-4 py-4 bg-white border-0 border-b-2 border-gray-200 focus:border-brand-red focus:ring-0 transition-colors" required>
                         </div>
                         <div>
-                            <label class="block text-xs font-bold text-brand-dark uppercase tracking-widest mb-2">Nom</label>
+                            <label class="block text-xs font-bold text-brand-dark uppercase tracking-widest mb-2" data-i18n="formLastname">Nom</label>
                             <input type="text" name="lastname" class="w-full px-4 py-4 bg-white border-0 border-b-2 border-gray-200 focus:border-brand-red focus:ring-0 transition-colors" required>
                         </div>
                     </div>
                     <div>
-                        <label class="block text-xs font-bold text-brand-dark uppercase tracking-widest mb-2">Courriel</label>
+                        <label class="block text-xs font-bold text-brand-dark uppercase tracking-widest mb-2" data-i18n="formEmail">Courriel</label>
                         <input type="email" name="email" class="w-full px-4 py-4 bg-white border-0 border-b-2 border-gray-200 focus:border-brand-red focus:ring-0 transition-colors" required>
                     </div>
                     <div>
-                        <label class="block text-xs font-bold text-brand-dark uppercase tracking-widest mb-2">Message</label>
-                        <textarea name="message" rows="4" class="w-full px-4 py-4 bg-white border-0 border-b-2 border-gray-200 focus:border-brand-red focus:ring-0 transition-colors" placeholder="Parlez-moi de votre projet..." required></textarea>
+                        <label class="block text-xs font-bold text-brand-dark uppercase tracking-widest mb-2" data-i18n="formMessage">Message</label>
+                        <textarea name="message" rows="4" data-i18n-placeholder="formPlaceholderProject" class="w-full px-4 py-4 bg-white border-0 border-b-2 border-gray-200 focus:border-brand-red focus:ring-0 transition-colors" placeholder="Parlez-moi de votre projet..." required></textarea>
                     </div>
-                    <button type="submit" class="w-full bg-brand-dark text-white font-black uppercase tracking-widest py-5 rounded hover:bg-brand-red transition-all duration-300 shadow-lg">
+                    <button type="submit" class="w-full bg-brand-dark text-white font-black uppercase tracking-widest py-5 rounded hover:bg-brand-red transition-all duration-300 shadow-lg" data-i18n="formSend">
                         Envoyer le message
                     </button>
                 </form>
@@ -238,11 +246,11 @@
         <div class="max-w-7xl mx-auto px-4">
             <span class="text-xl font-black tracking-tight mb-4 block">ÉQUIPE WILLIAM.</span>
             <div class="flex justify-center gap-6 text-sm text-gray-400 font-medium mb-8">
-                <a href="index.html" class="hover:text-brand-red">Accueil</a>
-                <a href="index.html#team" class="hover:text-brand-red">L'Équipe</a>
-                <a href="index.html#sold-map-section" class="hover:text-brand-red">Propriétés Vendues</a>
+                <a href="index.html" class="hover:text-brand-red" data-i18n="footerHome">Accueil</a>
+                <a href="index.html#team" class="hover:text-brand-red" data-i18n="footerTeam">L'Équipe</a>
+                <a href="index.html#sold-map-section" class="hover:text-brand-red" data-i18n="footerSoldProperties">Propriétés Vendues</a>
             </div>
-            <p class="text-xs text-gray-600 uppercase tracking-widest">&copy; 2026 Équipe William. Tous droits réservés.</p>
+            <p class="text-xs text-gray-600 uppercase tracking-widest" data-i18n="footerRights">&copy; 2026 Équipe William. Tous droits réservés.</p>
         </div>
     </footer>
 
